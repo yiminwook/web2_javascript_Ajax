@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html>
+  <body>
+    <article></article>
+    <input type="button" value="fetch" onclick="
+      fetch('html').then(res => {
+        res.text().then(text => {
+          document.querySelector('article').innerHTML = text;
+        })
+      })
+    "/>
+  </body>
+</html>
