@@ -13,14 +13,26 @@
   ">
   <ol>
     <li><a onclick="
-      document.querySelector('article').innerHTML = '<h2>HTML</h2>HTML is....';
-      ">HTML</a></li>
+      fetch('html.html').then(res => {
+        res.text().then(text => {
+          document.querySelector('article').innerHTML = text;
+        })
+      })
+    ">HTML</a></li>
+    <li><a onclick="      
+      fetch('css.html').then(res => {
+        res.text().then(text => {
+          document.querySelector('article').innerHTML = text;
+        })
+      })
+    ">CSS</a></li>
     <li><a onclick="
-      document.querySelector('article').innerHTML = '<h2>CSS</h2>CSS is....';
-      ">CSS</a></li>
-    <li><a onclick="
-      document.querySelector('article').innerHTML = '<h2>JavaScript</h2>JavaScript is....';
-      ">JavaScript</a></li>
+      fetch('javascript.html').then(res => {
+        res.text().then(text => {
+          document.querySelector('article').innerHTML = text;
+        })
+      })
+    ">JavaScript</a></li>
   </ol>
   <article></article>
 </body>
